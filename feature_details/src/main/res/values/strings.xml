@@ -1,0 +1,7 @@
+<resources>
+
+
+    <string name="fragment_header">Product details</string>
+    <string name="details_select_color_and_capacity">Select color and capacity</string>
+    <string name="btn_add_to_cart_text">Add to Cart \u0020\u0020\u0020 "$"%1$s</string>
+</resources>

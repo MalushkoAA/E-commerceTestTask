@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="alert_title">Something gone wrong!</string>
+    <string name="alert_message">Server is not response.
+        Please, check internet connection and try again.</string>
+    <string name="alert_btn">Try again</string>
+</resources>

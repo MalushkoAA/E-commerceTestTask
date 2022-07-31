@@ -1,0 +1,33 @@
+<resources>
+    // Main screen
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="tv_city">Saint Petersburg</string>
+    <string name="select_category">Select Category</string>
+    <string name="view_all">view all</string>
+    <string name="best_seller_discount_price">"$"%1$s</string>
+    <string name="best_seller_price">"$"%1$s</string>
+    <string name="mark_new">New</string>
+    <string name="hot_sales_header">Hot sales</string>
+    <string name="see_more">see more</string>
+    <string name="best_seller_header">Best Seller</string>
+    // options cart
+    <string-array name="spinner_brand">
+        <item>Iphone</item>
+        <item>Samsung</item>
+        <item>Xiaomi</item>
+    </string-array>
+
+    <string-array name="spinner_price">
+        <item>$0 - $3500</item>
+        <item>$3500 - $7500</item>
+        <item>$7500 - $10000</item>
+    </string-array>
+
+    <string-array name="spinner_size">
+        <item>4.5 to 5.5 inches</item>
+        <item>5.5 to 6.5 inches</item>
+        <item>6.5 to 7.5 inches</item>
+    </string-array>
+
+
+</resources>

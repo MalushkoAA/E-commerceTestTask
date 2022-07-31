@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/filter_options"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="30dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="37dp"
+            android:layout_marginTop="24dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="0dp">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnFilterCloser"
+                android:layout_width="37dp"
+                android:layout_height="37dp"
+                android:layout_marginStart="44dp"
+                android:background="@drawable/btn_layout_background"
+                app:backgroundTint="@color/secondary"
+                app:icon="@drawable/ic_close_x"
+                app:iconGravity="textStart"
+                app:iconPadding="0dp"
+                app:iconTint="@color/white" />
+
+            <TextView
+                style="@style/tvMedium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="69dp"
+                android:text="Filter options"
+                android:textColor="@color/secondary"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/btnFilterDone"
+                android:layout_width="86dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="44dp"
+                android:text="Done"
+                android:textAllCaps="false" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="35dp">
+
+            <TextView
+                style="@style/tvMediumOptions"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Brand" />
+
+            <Spinner
+                android:id="@+id/spinnerBrand"
+                android:layout_width="match_parent"
+                android:layout_height="37dp"
+                android:layout_marginTop="7dp"
+                android:entries="@array/spinner_brand" />
+
+            <TextView
+                style="@style/tvMediumOptions"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="Price" />
+
+            <Spinner
+                android:id="@+id/spinnerPrice"
+                android:layout_width="match_parent"
+                android:layout_height="37dp"
+                android:layout_marginTop="7dp"
+                android:entries="@array/spinner_price" />
+
+            <TextView
+                style="@style/tvMediumOptions"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="Size" />
+
+            <Spinner
+                android:id="@+id/spinnerSize"
+                android:layout_width="match_parent"
+                android:layout_height="37dp"
+                android:layout_marginTop="7dp"
+                android:entries="@array/spinner_size" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>
