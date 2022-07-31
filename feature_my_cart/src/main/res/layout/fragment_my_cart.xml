@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    tools:context=".MyCart">
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnBack"
+        android:layout_width="37dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="42dp"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/btn_layout_background"
+        app:backgroundTint="@color/secondary"
+        app:icon="@drawable/ic_arrow_back"
+        app:iconGravity="textStart"
+        app:iconPadding="0dp"
+        app:iconTint="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvDetailsHeader"
+        style="@style/tvRegular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:text="@string/adress"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="@id/btnBack"
+        app:layout_constraintEnd_toStartOf="@id/btnCart"
+        app:layout_constraintTop_toTopOf="@id/btnBack" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnCart"
+        android:layout_width="37dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="35dp"
+        android:background="@drawable/btn_layout_background"
+        android:backgroundTint="@color/primary"
+        app:icon="@drawable/ic_home_place_pin"
+        app:iconGravity="textStart"
+        app:iconPadding="0dp"
+        app:iconTint="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvTitle"
+        style="@style/tvBold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="@string/title"
+        android:textSize="35sp"
+        app:layout_constraintStart_toStartOf="@+id/btnBack"
+        app:layout_constraintTop_toBottomOf="@+id/btnBack" />
+
+    <ImageView
+        android:id="@+id/ivBackground"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/cart_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvCart"
+        android:layout_width="0dp"
+        android:layout_height="350dp"
+        android:clipToPadding="false"
+        android:paddingTop="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/ivBackground"
+        tools:listitem="@layout/item_cart" />
+
+    <ImageView
+        android:id="@+id/fatBorder"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:layout_marginHorizontal="4dp"
+        android:layout_marginBottom="27dp"
+        android:alpha=".25"
+        android:orientation="vertical"
+        android:src="@color/white"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:layout_constraintBottom_toBottomOf="@id/rvCart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rvCart" />
+
+    <TextView
+        android:id="@+id/tvTotal"
+        style="@style/tvRegular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="55dp"
+        android:layout_marginTop="15dp"
+        android:text="Total"
+        android:textColor="@color/white"
+        android:textSize="11sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fatBorder" />
+
+    <TextView
+        android:id="@+id/tvPriceTotal"
+        style="@style/tvBold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="300dp"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="@id/tvTotal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tvTotal"
+        tools:text="$3000" />
+
+    <TextView
+        android:id="@+id/tvDelivery"
+        style="@style/tvRegular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="55dp"
+        android:layout_marginTop="12dp"
+        android:text="Delivery"
+        android:textColor="@color/white"
+        android:textSize="11sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTotal" />
+
+    <TextView
+        android:id="@+id/tvDeliveryPrice"
+        style="@style/tvBold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="300dp"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="@id/tvDelivery"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tvDelivery"
+        tools:text="Free" />
+
+    <ImageView
+        android:id="@+id/thinBorder"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginHorizontal="4dp"
+        android:layout_marginBottom="27dp"
+        android:alpha=".25"
+        android:src="@color/white"
+        app:layout_constraintBottom_toTopOf="@id/checkoutButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/checkoutButton"
+        style="@style/tvBold"
+        android:layout_width="326dp"
+        android:layout_height="54dp"
+        android:layout_marginBottom="40dp"
+        android:background="@drawable/btn_layout_background"
+        android:backgroundTint="@color/primary"
+        android:text="Checkout"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        android:indeterminateDrawable="@drawable/progress_bg"
+        android:progress="0"
+        app:layout_constraintBottom_toTopOf="@id/fatBorder"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/ivBackground" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
