@@ -7,6 +7,6 @@ import android.view.View
 import android.view.ViewGroup
 
 
-class MyCart : Fragment() {
+class MyCartFragment : Fragment() {
 
 }
