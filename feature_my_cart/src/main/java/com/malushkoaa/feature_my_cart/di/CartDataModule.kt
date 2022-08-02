@@ -2,7 +2,7 @@ package com.malushkoaa.feature_my_cart.di
 
 import com.malushkoaa.core.di.FeatureScope
 import com.malushkoaa.feature_my_cart.data.CartRepoImpl
-import com.malushkoaa.feature_my_cart.data.network.MyCartApiService
+import com.malushkoaa.feature_my_cart.data.network.CartApiService
 import com.malushkoaa.feature_my_cart.domain.repo.CartRepo
 import dagger.Binds
 import dagger.Module
@@ -19,8 +19,8 @@ interface CartDataModule {
     companion object {
         @Provides
         @FeatureScope
-        fun provideMyCartApiService(retrofit: Retrofit): MyCartApiService {
-            return retrofit.create(MyCartApiService::class.java)
+        fun provideMyCartApiService(retrofit: Retrofit): CartApiService {
+            return retrofit.create(CartApiService::class.java)
         }
     }
 }

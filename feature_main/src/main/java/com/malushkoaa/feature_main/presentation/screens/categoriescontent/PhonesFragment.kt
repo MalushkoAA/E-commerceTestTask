@@ -5,7 +5,6 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
@@ -72,12 +71,7 @@ class PhonesFragment : Fragment() {
                     initBestSellerAdapter(it.data.bestSeller)
                 }
                 is CategoriesResponseState.Error -> {
-                    AlertDialog.Builder(requireContext())
-                        .setTitle(com.malushkoaa.core.R.string.alert_title)
-                        .setMessage(com.malushkoaa.core.R.string.alert_message)
-                        .setPositiveButton(com.malushkoaa.core.R.string.alert_btn) { _, _ -> phonesViewModel.startRequest() }
-                        .setCancelable(false)
-                        .show()
+                    showAlertDialog()
                 }
             }
         }
@@ -100,6 +94,15 @@ class PhonesFragment : Fragment() {
             findNavController().navigate(com.malushkoaa.navigation.R.id.action_mainFragment_to_detailsFragment)
         }
         bestSellerAdapter.submitList(bestSellerList)
+    }
+    
+    private fun showAlertDialog(){
+        AlertDialog.Builder(requireContext())
+            .setTitle(com.malushkoaa.core.R.string.alert_title)
+            .setMessage(com.malushkoaa.core.R.string.alert_message)
+            .setPositiveButton(com.malushkoaa.core.R.string.alert_btn) { _, _ -> phonesViewModel.startRequest() }
+            .setCancelable(false)
+            .show()
     }
     
 }

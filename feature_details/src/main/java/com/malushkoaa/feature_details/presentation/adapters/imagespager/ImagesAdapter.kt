@@ -6,9 +6,16 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.malushkoaa.feature_details.databinding.ItemDetailsAdapterBinding
+import com.malushkoaa.feature_details.domain.entities.ItemColors
 
-class ImagesAdapter(private val imagesList: List<String>) :
+class ImagesAdapter() :
     RecyclerView.Adapter<ImagesViewHolder>() {
+    
+    var imagesList = listOf<String>()
+        set(value) {
+            field = value
+            notifyDataSetChanged()
+        }
     
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ImagesViewHolder {
         val binding = ItemDetailsAdapterBinding.inflate(

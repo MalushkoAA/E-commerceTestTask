@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background_color"
-    tools:context=".MyCartFragment">
+    tools:context=".presentation.screens.CartFragment">
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btnBack"
@@ -31,11 +31,11 @@
         android:text="@string/adress"
         android:textSize="15sp"
         app:layout_constraintBottom_toBottomOf="@id/btnBack"
-        app:layout_constraintEnd_toStartOf="@id/btnCart"
+        app:layout_constraintEnd_toStartOf="@id/btnAddress"
         app:layout_constraintTop_toTopOf="@id/btnBack" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/btnCart"
+        android:id="@+id/btnAddress"
         android:layout_width="37dp"
         android:layout_height="37dp"
         android:layout_marginTop="25dp"
@@ -69,7 +69,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
+        app:layout_constraintTop_toBottomOf="@+id/tvTitle"
+        tools:ignore="ContentDescription" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvCart"
@@ -77,6 +78,8 @@
         android:layout_height="350dp"
         android:clipToPadding="false"
         android:paddingTop="50dp"
+        android:orientation="vertical"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/ivBackground"
@@ -95,7 +98,8 @@
         app:layout_constraintBottom_toBottomOf="@id/rvCart"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/rvCart" />
+        app:layout_constraintTop_toBottomOf="@id/rvCart"
+        tools:ignore="ContentDescription" />
 
     <TextView
         android:id="@+id/tvTotal"
@@ -104,7 +108,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="55dp"
         android:layout_marginTop="15dp"
-        android:text="Total"
+        android:text="@string/tv_total"
         android:textColor="@color/white"
         android:textSize="11sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -115,7 +119,7 @@
         style="@style/tvBold"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="300dp"
+        android:layout_marginStart="280dp"
         android:textColor="@color/white"
         android:textSize="15sp"
         app:layout_constraintBottom_toBottomOf="@id/tvTotal"
@@ -130,7 +134,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="55dp"
         android:layout_marginTop="12dp"
-        android:text="Delivery"
+        android:text="@string/tv_delivery"
         android:textColor="@color/white"
         android:textSize="11sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -159,7 +163,8 @@
         android:src="@color/white"
         app:layout_constraintBottom_toTopOf="@id/checkoutButton"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="ContentDescription" />
 
     <Button
         android:id="@+id/checkoutButton"
@@ -169,7 +174,7 @@
         android:layout_marginBottom="40dp"
         android:background="@drawable/btn_layout_background"
         android:backgroundTint="@color/primary"
-        android:text="Checkout"
+        android:text="@string/btn_checkout"
         android:textAllCaps="false"
         android:textColor="@color/white"
         android:textSize="20sp"

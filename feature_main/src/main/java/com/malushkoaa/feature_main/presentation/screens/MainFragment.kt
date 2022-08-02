@@ -155,7 +155,7 @@ class MainFragment : Fragment() {
         binding.bottomNavBar.setOnItemSelectedListener { item ->
             when (item.itemId) {
                 R.id.fragmentCart -> {
-                    findNavController().navigate(com.malushkoaa.navigation.R.id.action_mainFragment_to_detailsFragment)
+                    findNavController().navigate(com.malushkoaa.navigation.R.id.action_mainFragment_to_cartFragment)
                     true
                 }
                 else -> true

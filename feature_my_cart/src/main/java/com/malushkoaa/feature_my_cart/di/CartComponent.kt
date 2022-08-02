@@ -2,7 +2,7 @@ package com.malushkoaa.feature_my_cart.di
 
 import com.malushkoaa.core.di.CoreComponent
 import com.malushkoaa.core.di.FeatureScope
-import com.malushkoaa.feature_my_cart.MyCartFragment
+import com.malushkoaa.feature_my_cart.presentation.screens.CartFragment
 import dagger.Component
 
 @FeatureScope
@@ -10,9 +10,9 @@ import dagger.Component
     dependencies = [CoreComponent::class],
     modules = [
         CartDataModule::class,
-        MyCartViewModelModule::class
+        CartViewModelModule::class
     ]
 )
 interface CartComponent {
-    fun inject(myCartFragment:MyCartFragment)
+    fun inject(cartFragment: CartFragment)
 }

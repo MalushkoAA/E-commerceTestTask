@@ -67,7 +67,10 @@ class DetailsFragment : Fragment() {
     private fun bindButtons() {
         with(binding) {
             btnBack.setOnClickListener { findNavController().popBackStack() }
-            btnCart.setOnClickListener { TODO() }
+            btnCart.setOnClickListener {
+                findNavController()
+                    .navigate(com.malushkoaa.navigation.R.id.action_detailsFragment_to_cartFragment)
+            }
         }
     }
     
@@ -93,7 +96,8 @@ class DetailsFragment : Fragment() {
     }
     
     private fun initImagesAdapter(imagesList: List<String>?) {
-        val imagesAdapter = ImagesAdapter(imagesList!!)
+        val imagesAdapter = ImagesAdapter()
+        imagesAdapter.imagesList = imagesList!!
         val pageTransformer = CompositePageTransformer().apply {
             addTransformer(MarginPageTransformer(60))
             addTransformer { page, position ->
