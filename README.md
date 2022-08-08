@@ -1,9 +1,10 @@
 # E-commerceTestTask
 Скриншоты приложения:
 
-![screenshot](https://github.com/MalushkoAA/E-commerceTestTask/blob/master/app/src/main/res/drawable/Screenshot1.png)
-![screenshot](https://github.com/MalushkoAA/E-commerceTestTask/blob/master/app/src/main/res/drawable/Screenshot2.png)
-![screenshot](https://github.com/MalushkoAA/E-commerceTestTask/blob/master/app/src/main/res/drawable/Screenshot3.png)
+![screenshot](https://github.com/MalushkoAA/E-commerceTestTask/blob/master/app/src/main/res/drawable/screenshot1.png)
+![screenshot](https://github.com/MalushkoAA/E-commerceTestTask/blob/master/app/src/main/res/drawable/screenshot2.png)
+![screenshot](https://github.com/MalushkoAA/E-commerceTestTask/blob/master/app/src/main/res/drawable/screenshot3.png)
+![screenshot](https://github.com/MalushkoAA/E-commerceTestTask/blob/master/app/src/main/res/drawable/code.png)
 
 
 Выполнено по ТЗ:
